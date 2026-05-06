@@ -1,6 +1,10 @@
 import styles from './HomePage.module.css'
 
 const assetsUrl = '/assets/'
+<<<<<<< HEAD
+=======
+const baseUrl = '/'
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 
 const PLATFORMS = [
   { name: 'Steam', img: `${assetsUrl}img/plataformas_descarga/steam_logo.png`, href: '#' },
@@ -10,6 +14,7 @@ const PLATFORMS = [
 ]
 
 export default function HomePage() {
+<<<<<<< HEAD
 
   const scrollToPlatforms = (e) => {
     e.preventDefault()
@@ -54,6 +59,22 @@ export default function HomePage() {
           ⇓ Descarga en todas las plataformas ⇓
         </h2>
 
+=======
+  return (
+    <div className={styles.contenido}>
+      <div className={styles.hero}>
+        <h1 className={styles.heroTitle}>¡Bienvenido a Tower of Wonder!</h1>
+        <p className={styles.heroText}>
+          Sumérgete en un mundo de fantasía y aventura con nuestro nuevo videojuego. Explora
+          paisajes impresionantes, enfrenta desafíos épicos y descubre secretos ocultos en cada
+          rincón. ¡Únete a la comunidad de jugadores y vive la experiencia de Tower of Wonder hoy
+          mismo!
+        </p>
+      </div>
+
+      <div className={styles.platformsSection}>
+        <h2 className={styles.platformsTitle}>⇓ Descarga en todas las plataformas ⇓</h2>
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
         <div className={styles.platformsGrid} id="plataformas">
           {PLATFORMS.map(({ name, img, href }) => (
             <a key={name} href={href} className={styles.platformCard}>
@@ -61,9 +82,16 @@ export default function HomePage() {
             </a>
           ))}
         </div>
+<<<<<<< HEAD
 
       </div>
 
     </div>
   )
 }
+=======
+      </div>
+    </div>
+  )
+}
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404

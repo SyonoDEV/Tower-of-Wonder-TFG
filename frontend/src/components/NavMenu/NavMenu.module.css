@@ -2,20 +2,33 @@
   width: 55%;
 }
 
+<<<<<<< HEAD
 /* MENU DESKTOP */
+=======
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 .menu {
   list-style: none;
   display: flex;
   gap: 8px;
   align-items: center;
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 }
 
 .navItem {
   position: relative;
+<<<<<<< HEAD
+=======
+  margin-right: 6px;
+  transition: transform 140ms ease;
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 }
 
 .navLink {
   display: block;
+<<<<<<< HEAD
   padding: 8px 12px;
   text-decoration: none;
   color: var(--color-text-light);
@@ -23,10 +36,21 @@
   border-radius: var(--radius-md);
   background: linear-gradient(90deg, var(--color-gold-light), var(--color-gold-dark));
   transition: transform 0.2s, filter 0.2s;
+=======
+  padding: 6px 8px;
+  text-decoration: none;
+  color: var(--color-text-light);
+  white-space: nowrap;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, var(--color-gold-light) 0%, var(--color-gold-dark) 100%);
+  transition: transform var(--t-fast), filter var(--t-fast);
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 }
 
 .navLink:hover {
   transform: translateY(-2px);
+<<<<<<< HEAD
   filter: brightness(1.1);
 }
 
@@ -36,19 +60,108 @@
 }
 
 /* LICENCIA */
+=======
+  filter: brightness(1.08);
+}
+
+.arrow {
+  margin-left: 4px;
+  font-size: 11px;
+}
+
+/* Submenú desktop */
+.submenu {
+  list-style: none;
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 200;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, var(--color-purple-dark) 0%, var(--color-purple-darker) 100%);
+  box-shadow: 0 10px 22px rgba(8, 6, 10, 0.6);
+  min-width: 160px;
+  max-width: 220px;
+  border: 1px solid rgba(184, 138, 40, 0.1);
+  padding: 4px 0;
+}
+
+/* Desktop: hover abre el submenú.
+   En móvil esta regla se anula en el @media para que solo funcione el toggle JS. */
+.navItem:hover .submenu {
+  visibility: visible;
+  display: block;
+}
+
+/* Botón cerrar drawer — oculto en desktop */
+.closeDrawerBtn {
+  display: none;
+}
+
+.submenuLink {
+  display: block;
+  padding: 8px 12px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background var(--t-fast);
+}
+
+.submenuLink:hover {
+  background: rgba(184, 138, 40, 0.08);
+}
+
+/* Licencia — oculta en desktop */
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 .licenseMobile {
   display: none;
 }
 
+<<<<<<< HEAD
 /* =========================
    MOBILE
    ========================= */
 @media (max-width: 768px) {
+=======
+/* =====================
+   MÓVIL
+   ===================== */
+@media (max-width: 768px) {
+  /* FIX Bug 4: deshabilitar :hover de desktop en móvil.
+     El submenú solo se muestra/oculta por JS (clase submenuOpen). */
+  .navItem:hover .submenu {
+    visibility: hidden;
+    display: none;
+  }
+
+  /* Botón cerrar drawer — visible solo en móvil */
+  .closeDrawerBtn {
+    display: flex;
+    align-self: flex-end;
+    margin: 8px 16px 4px;
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity var(--t-fast);
+  }
+
+  .closeDrawerBtn:hover {
+    opacity: 1;
+  }
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 
   .menuDiv {
     position: fixed;
     top: 0;
     right: -100%;
+<<<<<<< HEAD
     width: 80%;
     max-width: 320px;
     height: 100vh;
@@ -58,12 +171,26 @@
     flex-direction: column;
     z-index: 200;
     box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+=======
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--color-purple-dark) 0%, var(--color-purple-darker) 100%);
+    z-index: 200;
+    transition: right var(--t-slow);
+    overflow-y: auto;
+    padding: 0;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   }
 
   .menuDiv.active {
     right: 0;
   }
 
+<<<<<<< HEAD
   .closeBtn {
     display: block;
     background: none;
@@ -77,10 +204,16 @@
 
   .menu {
     flex-direction: column;
+=======
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
     gap: 0;
   }
 
   .navItem {
+<<<<<<< HEAD
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
@@ -90,10 +223,25 @@
     padding: 16px 20px;
     font-size: 16px;
     display: block;
+=======
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navLink {
+    padding: 15px 20px;
+    border-radius: 0;
+    font-size: 16px;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   }
 
   .navLink:hover {
     transform: none;
+<<<<<<< HEAD
     background: rgba(255,255,255,0.05);
   }
 
@@ -107,3 +255,50 @@
     border-top: 1px solid rgba(255,255,255,0.1);
   }
 }
+=======
+    background: rgba(255, 255, 255, 0.05);
+    filter: none;
+  }
+
+  /* Submenú móvil: oculto por defecto, visible al toggling */
+  .submenu {
+    position: static;
+    visibility: visible;
+    display: none;
+    box-shadow: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .submenuOpen .submenu {
+    display: block;
+  }
+
+  .submenuLink {
+    padding: 12px 20px 12px 40px;
+  }
+
+  .licenseMobile {
+    display: block;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+  }
+
+  .licenseText {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  .licenseText a {
+    color: var(--color-gold-light);
+    text-decoration: none;
+  }
+}
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404

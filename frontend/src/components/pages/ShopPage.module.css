@@ -3,9 +3,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
+<<<<<<< HEAD
 
   /* 🔥 FIX FOOTER */
   min-height: 80vh;
+=======
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 }
 
 .shopHeader {
@@ -33,15 +36,24 @@
   gap: 12px;
   overflow-x: auto;
   scroll-behavior: smooth;
+<<<<<<< HEAD
   scrollbar-width: none;
   -ms-overflow-style: none;
+=======
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   padding: 2px 0;
   flex: 1;
   min-width: 0;
 }
 
 .filters::-webkit-scrollbar {
+<<<<<<< HEAD
   display: none;
+=======
+  display: none; /* Chrome, Safari and Opera */
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 }
 
 .scrollBtn {
@@ -157,6 +169,7 @@
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
   width: 100%;
+<<<<<<< HEAD
 
   /* 🔥 FIX FOOTER */
   min-height: 40vh;
@@ -165,6 +178,11 @@
 .loading,
 .empty,
 .error {
+=======
+}
+
+.loading, .empty, .error {
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   text-align: center;
   font-family: var(--font-body);
   color: var(--color-text-warm);
@@ -177,16 +195,22 @@
   color: var(--color-error);
 }
 
+<<<<<<< HEAD
 /* 📱 MOBILE */
+=======
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
 @media (max-width: 768px) {
   .container {
     padding: 20px 10px;
     width: 100%;
     margin: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
 
     /* 🔥 mantiene footer correcto en móvil */
     min-height: 85vh;
+=======
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   }
 
   .shopHeader {
@@ -209,7 +233,11 @@
     padding: 4px 0;
     flex: 1;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   .controls {
     flex-direction: column;
     align-items: stretch;
@@ -217,7 +245,11 @@
     gap: 12px;
     margin: 0;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   .searchWrapper {
     max-width: none;
     width: 100%;
@@ -229,10 +261,18 @@
     padding: 12px;
     font-size: 15px;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
   .grid {
     grid-template-columns: 1fr;
     gap: 25px;
     width: 100%;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c435fbe890c05877dfa89621aae0d892d6ed2404
