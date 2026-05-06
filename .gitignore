@@ -1,0 +1,39 @@
+# Variables sensibles
+.env
+
+# Docker volúmenes
+db_data/
+
+# Logs
+*.log
+logs/
+
+# Build Spring Boot (generado por Maven/Docker)
+spring/target/
+spring/.mvn/repository/
+
+# Build de React (generado por Vite/Docker)
+php/public/assets/dist/
+frontend/dist/
+
+# Composer
+php/vendor/
+
+# Node
+frontend/node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Apuntes / Documentación interna (no va al repo)
+MIGRATION.md
+docs/

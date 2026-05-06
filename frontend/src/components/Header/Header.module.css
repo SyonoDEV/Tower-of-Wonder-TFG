@@ -1,0 +1,163 @@
+.header {
+  background: linear-gradient(90deg, #000 0%, #12081a 40%, #2a1b3d 100%);
+  color: var(--color-text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  box-shadow: var(--shadow-header);
+  position: relative;
+  z-index: 100;
+}
+
+/* LOGO */
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-height: 54px;
+}
+
+/* RIGHT AREA */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* USER */
+.userArea {
+  position: relative;
+}
+
+/* BOTÓN USER */
+.userButton {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+  font-family: var(--font-heading);
+}
+
+.userButton:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.username {
+  color: var(--color-gold-light);
+  font-weight: 600;
+}
+
+.arrow {
+  opacity: 0.7;
+}
+
+/* LOGIN */
+.loginBtn {
+  background: linear-gradient(90deg, #4b2a66, #6b3f8a);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: var(--font-heading);
+}
+
+.loginBtn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* DROPDOWN */
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: rgba(15, 10, 25, 0.95);
+  border: 1px solid rgba(198, 161, 86, 0.25);
+  border-radius: 12px;
+  min-width: 200px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.18s ease-out;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ITEMS */
+.dropdownItem {
+  display: block;
+  padding: 12px 14px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+  background: none;
+  transition: 0.2s;
+  font-family: var(--font-body);
+}
+
+.dropdownItem:hover {
+  background: rgba(198, 161, 86, 0.15);
+  color: var(--color-gold-light);
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* MOBILE */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-gold-light);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .logo {
+    max-height: 44px;
+  }
+
+  .loginBtn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .userButton {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
